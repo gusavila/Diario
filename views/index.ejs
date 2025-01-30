@@ -1,0 +1,44 @@
+
+    <%- include("partials/header.ejs") %>
+    <div class="container d-flex flex-column mt-auto">
+
+        <div class="container text_posted">
+            <% if (locals.textPosted) { %>
+
+                <h1> Diário </h1>
+                
+                
+
+                <% textPosted.forEach(text => { %>
+                    <p> <%= text %> </p>
+                <% }); %>
+                
+                <% } else { %>
+                    <h1>Diário</h1>
+
+                    <p class="subtitle">Como foi o seu dia? Escreva algo abaixo para começar. 🥰</p>
+
+                    <% } %>
+        </div>
+
+        <div class="container row justify-content-center">
+            <form action="/delete" method="POST">
+                <button class="btn btn-outline-danger btn-limpar" type="submit">Limpar</button>
+            </form>
+        </div>
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6 ">
+                    <form action="/submit" method="POST">  
+                        <div class="d-flex space">
+                            <textarea name="message" placeholder="Escrever..." id="message" class="form-control mb-2 text-area" rows="2"></textarea>
+                            <button class="btn bg-dark text-bg-dark btn-outline-secondary mb-2 btn-enviar" type="submit">Enviar</button>
+                        </div>
+                    </form>
+                 </div>
+            </div>
+        </div> 
+    </div>
+    <%- include("partials/footer.ejs") %>
+    
