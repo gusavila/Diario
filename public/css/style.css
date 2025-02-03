@@ -1,3 +1,8 @@
+.text_posted {
+    padding: 0 4em;
+    height: 60vh;
+}
+
 h1 {
     text-align: center;
     font-family: serif;
@@ -5,8 +10,12 @@ h1 {
     margin-bottom: 10px;
 }
 
- .text_posted {
-    padding: 0 120px;
+.title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+p {  
+    color: rgb(59, 59, 59);
 }
 
 .subtitle {
@@ -14,10 +23,6 @@ h1 {
     font-size: 2rem;
     color: gray;
     margin-bottom: 40px;
-}
-
-p {  
-    color: rgb(59, 59, 59);
 }
 
 .btn-enviar {
@@ -29,6 +34,11 @@ p {
     position: absolute;
     top: 100px;
     right: 200px;
+}
+
+.text-container {
+    position: fixed;
+    bottom: 12%;
 }
 
 .text-area {

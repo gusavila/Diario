@@ -1,21 +1,23 @@
 
     <%- include("partials/header.ejs") %>
-    <div class="container d-flex flex-column mt-auto">
+    <div class="container d-flex flex-column">
 
-        <div class="container text_posted">
+        <div class="container text_posted overflow-auto w-55">
             <% if (locals.textPosted) { %>
 
-                <h1> Diário </h1>
+                <h1 class="sticky-top bg-white title"> Diário </h1>
                 
                 
 
                 <% textPosted.forEach(text => { %>
-                    <p> <%= text %> </p>
+                    <div class="container">
+                        <p> <%= text %> </p>
+                    </div>
                 <% }); %>
                 
                 <% } else { %>
                     <h1>Diário</h1>
-
+        
                     <p class="subtitle">Como foi o seu dia? Escreva algo abaixo para começar. 🥰</p>
 
                     <% } %>
@@ -27,13 +29,13 @@
             </form>
         </div>
         
-        <div class="container">
+        <div class="container text-container">
             <div class="row justify-content-center">
-                <div class="col-6 ">
+                <div class="col-6">
                     <form action="/submit" method="POST">  
                         <div class="d-flex space">
-                            <textarea name="message" placeholder="Escrever..." id="message" class="form-control mb-2 text-area" rows="2"></textarea>
-                            <button class="btn bg-dark text-bg-dark btn-outline-secondary mb-2 btn-enviar" type="submit">Enviar</button>
+                            <textarea name="message" placeholder="Escrever..." id="message floatingTextarea" class="form-control text-area fs-6 pt-1 pb-0"></textarea>
+                            <button class="btn bg-dark text-bg-dark btn-outline-secondary btn-enviar" type="submit">Enviar</button>
                         </div>
                     </form>
                  </div>
