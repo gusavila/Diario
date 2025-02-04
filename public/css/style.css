@@ -1,6 +1,6 @@
 .text_posted {
     padding: 0 4em;
-    height: 60vh;
+    height: 70vh;
 }
 
 h1 {
@@ -16,6 +16,12 @@ h1 {
 
 p {  
     color: rgb(59, 59, 59);
+}
+
+.text_posted_container:hover {
+    background-color: rgb(241, 241, 241);
+    border-radius: 12px;
+    transition: 300ms;
 }
 
 .subtitle {

@@ -10,8 +10,8 @@
                 
 
                 <% textPosted.forEach(text => { %>
-                    <div class="container">
-                        <p> <%= text %> </p>
+                    <div class="container p-2 text_posted_container">
+                        <p class="mb-0"> <%= text %> </p>
                     </div>
                 <% }); %>
                 
@@ -32,10 +32,10 @@
         <div class="container text-container">
             <div class="row justify-content-center">
                 <div class="col-6">
-                    <form action="/submit" method="POST">  
+                    <form id="message-form" action="/submit" method="POST">  
                         <div class="d-flex space">
-                            <textarea name="message" placeholder="Escrever..." id="message floatingTextarea" class="form-control text-area fs-6 pt-1 pb-0"></textarea>
-                            <button class="btn bg-dark text-bg-dark btn-outline-secondary btn-enviar" type="submit">Enviar</button>
+                            <textarea name="message" placeholder="Escrever..." id="message floatingTextarea" class="form-control text-area fs-6 pt-1 pb-0 border-secondary shadow-none"></textarea>
+                            <button class="btn bg-dark text-bg-dark btn-outline-secondary btn-enviar">Enviar</button>
                         </div>
                     </form>
                  </div>
