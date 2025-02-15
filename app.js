@@ -14,13 +14,8 @@ app.get("/", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
-    if ((req.body["message"] == [""]) && (text == "")) {
-        res.render("index.ejs");
-    } else {
-        text.push(req.body["message"]);
-        res.render("index.ejs", {textPosted: text});
-    }
-    
+    text.push(req.body["message"]);
+    res.render("index.ejs", {textPosted: text}); 
 });
 
 app.post("/delete", (req, res) => {

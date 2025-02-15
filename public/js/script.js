@@ -1,3 +1,7 @@
+document.querySelector("textarea").focus();
+
+
+
 function sendMensage() {
     let textarea = document.querySelector("textarea");
     let mensage = textarea.value.trim();
