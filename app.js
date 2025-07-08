@@ -14,13 +14,19 @@ app.get("/", (req, res) => {
 });
 
 app.post("/submit", (req, res) => {
-    text.push(req.body["message"]);
-    res.render("index.ejs", {textPosted: text}); 
+    const message = req.body["message"];
+    text.push(message);
+    res.render("index.ejs", {textPosted: text});
+});
+
+app.post("/limpar", (req, res) => {
+    text = [];
+    res.render("index.ejs");
 });
 
 app.post("/delete", (req, res) => {
-    text = [];
-    res.render("index.ejs");
+    const textSelected = 
+    text.pop()
 });
 
 app.listen(port, () => {
